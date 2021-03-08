@@ -46,8 +46,8 @@ export default function ({ setUseMobileDevice, useMobileDevice }) {
       setMobileDeviceUrl(target);
       setPCUrl(target.replace(PHONE_NODE_QUERY, '').replace(/[?|&]*$/, ''));
     } else {
-      setMobileDeviceUrl(target);
-      setPCUrl(`${target}${target.indexOf('?') === -1 ? '?' : '&'}${PHONE_NODE_QUERY}`);
+      setMobileDeviceUrl(`${target}${target.indexOf('?') === -1 ? '?' : '&'}${PHONE_NODE_QUERY}`);
+      setPCUrl(target);
     }
   };
 
